@@ -1,0 +1,434 @@
+{
+  "change_1": {
+    "id": "CE-1",
+    "name": "Chang'e-1",
+    "target": "Moon",
+    "type": "Orbiter",
+    "launch_date": "2007-10-24",
+    "end_date": "2009-03-01",
+    "status": "Completed (Controlled Impact)",
+    "primary_objectives": "Global 3D lunar stereoscopic imaging, distribution and abundance of 14 chemical elements, lunar regolith thickness, Earth-Moon space environment.",
+    "instruments": [
+      {
+        "name": "CCD Stereo Camera",
+        "acronym": "CCD",
+        "type": "Optical Imaging",
+        "resolution": "120 m/pixel",
+        "spectral_bands": "Visible"
+      },
+      {
+        "name": "Laser Altimeter",
+        "acronym": "LAM",
+        "type": "Topography",
+        "accuracy": "\u00b15 m",
+        "description": "Global Lunar DEM mapping"
+      },
+      {
+        "name": "Interference Imaging Spectrometer",
+        "acronym": "I2S",
+        "type": "Hyperspectral",
+        "spectral_range": "0.48 - 0.96 \u00b5m",
+        "bands": 32
+      },
+      {
+        "name": "Gamma-Ray Spectrometer",
+        "acronym": "GRS",
+        "type": "Elemental Spectroscopy",
+        "description": "Mapping U, Th, K, Fe, Ti, Si, Al, Mg"
+      },
+      {
+        "name": "X-Ray Spectrometer",
+        "acronym": "XRS",
+        "type": "Elemental Spectroscopy",
+        "description": "Fluorescent X-ray detection of Mg, Al, Si"
+      },
+      {
+        "name": "Microwave Radiometer",
+        "acronym": "CELMS / MRM",
+        "type": "Passive Microwave",
+        "frequencies": "3.0, 7.8, 19.35, 37.0 GHz",
+        "description": "Global brightness temperature and regolith thickness"
+      },
+      {
+        "name": "Solar Wind Ion Detector",
+        "acronym": "SWIDs",
+        "type": "Space Physics",
+        "description": "Solar wind interaction with Moon"
+      },
+      {
+        "name": "High-Energy Particle Detector",
+        "acronym": "HPD",
+        "type": "Space Physics",
+        "description": "Cosmic rays and energetic particles"
+      }
+    ],
+    "key_discoveries": [
+      "Produced 120m full-coverage global lunar optical mosaic",
+      "Constructed first global high-precision lunar microwave brightness temperature map (CELMS)",
+      "Estimated global lunar regolith thickness and Helium-3 inventory"
+    ]
+  },
+  "change_2": {
+    "id": "CE-2",
+    "name": "Chang'e-2",
+    "target": "Moon & Asteroid 4179 Toutatis",
+    "type": "Orbiter / Deep Space Probe",
+    "launch_date": "2010-10-01",
+    "status": "Completed (Extended deep space mission)",
+    "primary_objectives": "High-resolution lunar landing site imaging (7m/1.3m), Sun-Earth L2 Lagrange point exploration, asteroid Toutatis flyby.",
+    "instruments": [
+      {
+        "name": "CCD Stereo Camera (High Res)",
+        "acronym": "CCD",
+        "type": "Optical Imaging",
+        "resolution": "7 m (100km orbit) / 1.3 m (15km periapsis)",
+        "spectral_bands": "Visible"
+      },
+      {
+        "name": "Laser Altimeter",
+        "acronym": "LAM",
+        "type": "Topography",
+        "repetition_rate": "5 Hz",
+        "accuracy": "\u00b11 m"
+      },
+      {
+        "name": "X-Ray / Gamma-Ray Spectrometer",
+        "acronym": "XRS/GRS",
+        "type": "Spectroscopy",
+        "description": "Enhanced resolution elemental mapping"
+      },
+      {
+        "name": "Solar Wind Ion Detector",
+        "acronym": "SWIDs",
+        "type": "Space Physics",
+        "description": "Solar wind & Lagrange point environment"
+      }
+    ],
+    "key_discoveries": [
+      "Full-moon 7-meter resolution global map (highest resolution global lunar map of its era)",
+      "Closest flyby imaging of near-Earth asteroid (4179) Toutatis at 3.2 km distance, revealing bifurcated contact binary structure"
+    ]
+  },
+  "change_3": {
+    "id": "CE-3",
+    "name": "Chang'e-3",
+    "target": "Moon",
+    "type": "Lander & Rover (Yutu / Jade Rabbit)",
+    "launch_date": "2013-12-01",
+    "landing_date": "2013-12-14",
+    "landing_site": {
+      "name": "Mare Imbrium (Zi Wei Crater / Guang Han Gong)",
+      "latitude": 44.115,
+      "longitude": -19.515,
+      "elevation_m": -2640,
+      "geological_unit": "Late Imbrian / Eratosthenian basalts (EM4 unit)"
+    },
+    "rover": {
+      "name": "Yutu (Jade Rabbit)",
+      "mass_kg": 140,
+      "traverse_distance_m": 114.8,
+      "operational_lifetime_days": 972
+    },
+    "instruments": [
+      {
+        "name": "Lunar Penetrating Radar",
+        "acronym": "LPR",
+        "type": "Ground Penetrating Radar",
+        "channels": [
+          "Channel 1: 60 MHz (depth ~400m)",
+          "Channel 2: 500 MHz (depth ~30m, 30cm resolution)"
+        ],
+        "description": "Subsurface regolith and basalt layer profiling"
+      },
+      {
+        "name": "Visible and Near-Infrared Spectrometer",
+        "acronym": "VNIS",
+        "type": "Hyperspectral Imager",
+        "spectral_range": "0.45 - 2.40 \u00b5m",
+        "bands": 100,
+        "description": "In-situ mineral composition and olivine/pyroxene absorption"
+      },
+      {
+        "name": "Active Particle-induced X-ray Spectrometer",
+        "acronym": "APXS",
+        "type": "Elemental Chemistry",
+        "description": "In-situ rock and regolith elemental abundances (Mg, Al, Si, K, Ca, Ti, Fe)"
+      },
+      {
+        "name": "Panoramic Camera",
+        "acronym": "PCAM",
+        "type": "Color Stereo Camera",
+        "resolution": "Sub-millimeter at 1m distance",
+        "fov": "360\u00b0 cylindrical panoramas"
+      },
+      {
+        "name": "Moon-based Ultraviolet Telescope",
+        "acronym": "LUT",
+        "type": "Astrophysics",
+        "wavelength": "245 - 340 nm",
+        "description": "First long-term UV observatory operating from the lunar surface"
+      },
+      {
+        "name": "Extreme Ultraviolet Camera",
+        "acronym": "EUVC",
+        "type": "Space Physics",
+        "wavelength": "30.4 nm",
+        "description": "Direct global imaging of Earth's plasmasphere"
+      }
+    ],
+    "key_discoveries": [
+      "Identified a new type of lunar basalt with intermediate titanium (TiO2) and high iron (FeO) content",
+      "First ground-truth radar stratigraphy down to 400m in Mare Imbrium showing multiple episodic volcanic flooding layers",
+      "Continuous astronomical observation from the Moon with LUT (photometry of binary stars and AGN)"
+    ]
+  },
+  "change_4": {
+    "id": "CE-4",
+    "name": "Chang'e-4",
+    "target": "Moon (Lunar Farside)",
+    "type": "Lander & Rover (Yutu-2) + Relay Satellite (Queqiao)",
+    "launch_date": "2018-12-07",
+    "landing_date": "2019-01-03",
+    "landing_site": {
+      "name": "Von K\u00e1rm\u00e1n Crater, South Pole-Aitken (SPA) Basin",
+      "latitude": -45.457,
+      "longitude": 177.588,
+      "elevation_m": -5930,
+      "geological_unit": "SPA Basin interior / Finsen crater ejecta sheet"
+    },
+    "rover": {
+      "name": "Yutu-2 (Jade Rabbit-2)",
+      "mass_kg": 140,
+      "traverse_distance_m": 1610,
+      "operational_status": "Active (World record longevity for lunar rover >5 years)"
+    },
+    "instruments": [
+      {
+        "name": "Lunar Penetrating Radar",
+        "acronym": "LPR",
+        "type": "Ground Penetrating Radar",
+        "channels": [
+          "Ch 1: 60 MHz",
+          "Ch 2: 500 MHz"
+        ],
+        "description": "Farside regolith stratigraphy & buried craters"
+      },
+      {
+        "name": "Visible and Near-Infrared Spectrometer",
+        "acronym": "VNIS",
+        "type": "Vis-NIR Reflectance",
+        "spectral_range": "0.45 - 2.40 \u00b5m",
+        "description": "Deep mantle mineralogy (low-Ca pyroxene, olivine)"
+      },
+      {
+        "name": "Panoramic Camera",
+        "acronym": "PCAM",
+        "type": "Stereo Color Imaging",
+        "description": "3D terrain reconstructions & boulder morphology"
+      },
+      {
+        "name": "Lunar Lander Neutrons and Dosimetry",
+        "acronym": "LND",
+        "type": "Radiation Dosimetry (Germany Kiel Univ)",
+        "description": "Lunar surface radiation dose equivalent (1369 \u00b5Sv/day)"
+      },
+      {
+        "name": "Advanced Small Analyzer for Neutrals",
+        "acronym": "ASAN",
+        "type": "Particle Physics (Sweden IRF)",
+        "description": "Energetic neutral atoms & solar wind sputtering"
+      },
+      {
+        "name": "Low Frequency Radio Spectrometer",
+        "acronym": "LFRS",
+        "type": "Radio Astronomy (0.1 - 40 MHz)",
+        "description": "Electromagnetically quiet farside cosmic dark age exploration"
+      }
+    ],
+    "key_discoveries": [
+      "First landing and rover exploration on the lunar farside in human history",
+      "Discovered low-calcium pyroxene and olivine minerals excavated from the lunar upper mantle by SPA giant impact",
+      "Unveiled ~40m thickness of multi-layered porous impact ejecta deposits with low radar attenuation",
+      "Precise measurement of lunar surface radiation dose rate for future astronaut safety (60 \u00b5Sv/h, ~200x Earth surface)"
+    ]
+  },
+  "change_5": {
+    "id": "CE-5",
+    "name": "Chang'e-5",
+    "target": "Moon",
+    "type": "Lunar Sample Return (Orbiter, Lander, Ascender, Returner)",
+    "launch_date": "2020-11-23",
+    "landing_date": "2020-12-01",
+    "sample_return_date": "2020-12-16",
+    "sample_mass_g": 1731,
+    "landing_site": {
+      "name": "Northern Oceanus Procellarum (Mons R\u00fcmker region / Statio Tianchuan)",
+      "latitude": 43.058,
+      "longitude": -51.916,
+      "elevation_m": -2570,
+      "geological_unit": "Young mare basalt unit (P58 / Em4)"
+    },
+    "instruments": [
+      {
+        "name": "Lunar Mineralogical Spectrometer",
+        "acronym": "LMS",
+        "type": "Vis-SWIR Hyperspectral",
+        "spectral_range": "0.48 - 3.20 \u00b5m",
+        "bands": 480,
+        "description": "In-situ hydroxyl (OH) and water absorption at 2.85 \u00b5m"
+      },
+      {
+        "name": "Lunar Regolith Penetrating Radar",
+        "acronym": "LRPR",
+        "type": "High-Frequency Radar (2 GHz)",
+        "description": "Drill site structural integrity & depth mapping (0 - 2.5m)"
+      },
+      {
+        "name": "Panoramic Camera",
+        "acronym": "PCAM",
+        "type": "Color Stereo Camera",
+        "description": "Drill and scoop site context imaging"
+      },
+      {
+        "name": "Landing Camera",
+        "acronym": "LCAM",
+        "type": "Optical Descent",
+        "description": "Descent trajectory optical tracking"
+      }
+    ],
+    "key_discoveries": [
+      "Returned youngest known lunar basalts dated at 2.030 \u00b1 0.004 billion years (extending known lunar volcanic activity by ~1 billion years)",
+      "In-situ spectral detection of indigenous water/hydroxyl (OH) in lunar soil (<120 ppm) and apatite crystals (up to 900 ppm)",
+      "Identified a new mineral species: Changesite-(Y) (a phosphate mineral in columnar crystals)"
+    ]
+  },
+  "change_6": {
+    "id": "CE-6",
+    "name": "Chang'e-6",
+    "target": "Moon (Lunar Farside)",
+    "type": "Lunar Farside Sample Return (Orbiter, Lander, Ascender, Returner)",
+    "launch_date": "2024-05-03",
+    "landing_date": "2024-06-01",
+    "sample_return_date": "2024-06-25",
+    "sample_mass_g": 1935.3,
+    "landing_site": {
+      "name": "Apollo Basin, South Pole-Aitken (SPA) Basin (Statio Tianhe)",
+      "latitude": -41.638,
+      "longitude": -153.985,
+      "elevation_m": -5250,
+      "geological_unit": "Farside SPA mare basalt fill"
+    },
+    "instruments": [
+      {
+        "name": "Lunar Mineralogical Spectrometer",
+        "acronym": "LMS",
+        "type": "Vis-SWIR Hyperspectral (0.48 - 3.20 \u00b5m)",
+        "description": "In-situ farside mineral & hydration mapping"
+      },
+      {
+        "name": "Lunar Regolith Penetrating Radar",
+        "acronym": "LRPR",
+        "type": "Subsurface Radar",
+        "description": "Drill core structure verification"
+      },
+      {
+        "name": "Detection of Outgassing RadoN",
+        "acronym": "DORN",
+        "type": "Radon Alpha Detector (France CNES)",
+        "description": "Radon outgassing & lunar exosphere dynamics"
+      },
+      {
+        "name": "Negative Ions on Lunar Surface",
+        "acronym": "NILS",
+        "type": "Ion Sensor (Sweden IRF / ESA)",
+        "description": "First detection of negative ions on the Moon from solar wind interaction"
+      }
+    ],
+    "key_discoveries": [
+      "World's first sample return from the lunar farside (1,935.3 g)",
+      "Revealed distinct dichotomy in basalt mantle source composition between lunar nearside and farside (low-Ti, depleted in KREEP elements)",
+      "First in-situ detection of lunar surface negative ions (NILS)"
+    ]
+  },
+  "tianwen_1": {
+    "id": "TW-1",
+    "name": "Tianwen-1 & Zhurong Rover",
+    "target": "Mars",
+    "type": "Orbiter, Lander & Rover (Zhurong)",
+    "launch_date": "2020-07-23",
+    "mars_orbit_insertion": "2021-02-10",
+    "landing_date": "2021-05-15",
+    "landing_site": {
+      "name": "Southern Utopia Planitia",
+      "latitude": 25.066,
+      "longitude": 109.925,
+      "elevation_m": -4100,
+      "geological_unit": "Vastitas Borealis Formation / Ancient Martian Ocean Basin"
+    },
+    "rover": {
+      "name": "Zhurong (God of Fire)",
+      "mass_kg": 240,
+      "traverse_distance_m": 1921,
+      "operational_lifetime_sols": 358
+    },
+    "instruments": [
+      {
+        "name": "Rover Subsurface Penetrating Radar",
+        "acronym": "RoSub / RoRAD",
+        "type": "Polarimetric GPR",
+        "channels": [
+          "Ch 1: 15 - 35 MHz (depth ~80m)",
+          "Ch 2: 0.3 - 3 GHz (depth ~10m)"
+        ],
+        "description": "Subsurface sedimentary & paleoflood stratigraphy"
+      },
+      {
+        "name": "Mars Surface Composition Detector",
+        "acronym": "MarSCoDe",
+        "type": "Laser-Induced Breakdown Spectroscopy (LIBS) + Micro-Imager + SWIR (0.85 - 2.4 \u00b5m)",
+        "description": "Active laser ablation elemental chemistry (Fe, Ti, Si, Mg, Ca, Na, K, H, O)"
+      },
+      {
+        "name": "Multispectral Camera",
+        "acronym": "MSCAM",
+        "type": "8-Band Multispectral",
+        "spectral_bands": "480, 525, 650, 700, 800, 900, 950, 1000 nm",
+        "description": "Rock color ratios and iron oxidation"
+      },
+      {
+        "name": "Navigation and Terrain Camera",
+        "acronym": "NaTeCam",
+        "type": "Stereo Color Camera",
+        "fov": "360\u00b0 cylindrical panoramas",
+        "description": "Traverse routing and digital elevation modeling"
+      },
+      {
+        "name": "Mars Rover Magnetometer",
+        "acronym": "RoMAG",
+        "type": "Dual Fluxgate Magnetometer",
+        "range": "\u00b165,000 nT",
+        "resolution": "0.01 nT",
+        "description": "Surface remanent crustal magnetic field"
+      },
+      {
+        "name": "Mars Climate Station",
+        "acronym": "MCS",
+        "type": "Meteorological Suite",
+        "sensors": [
+          "Air Temperature (-120 to +40\u00b0C)",
+          "Pressure (1 - 1500 Pa)",
+          "Wind Speed (0 - 60 m/s)",
+          "Wind Direction",
+          "Microphone Audio"
+        ],
+        "description": "Martian boundary layer dynamics"
+      }
+    ],
+    "key_discoveries": [
+      "Discovered multi-layered paleoflood sedimentary units within top 80m of Utopia Planitia beneath fine duricrust",
+      "Identified hydrated sulfate minerals (gypsum, bassanite) in Amazonian-aged duricrust, indicating persistent liquid water activity in Mars's recent geological epoch (<1 Ga)",
+      "Discovered 16 buried polygon structures forming an ancient wet thermal-contraction cracked paleolandscape",
+      "Captured high-fidelity sound recordings of Martian wind and rover mobility"
+    ]
+  }
+}

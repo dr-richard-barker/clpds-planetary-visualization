@@ -1,0 +1,390 @@
+[
+  {
+    "id": "CE-3",
+    "body": "Moon",
+    "mission": "Chang'e-3",
+    "vehicle": "Lander & Yutu Rover",
+    "country": "China (CNSA)",
+    "lat": 44.115,
+    "lon": -19.515,
+    "elevation_m": -2640,
+    "year": 2013,
+    "color": "#e63946",
+    "region": "Mare Imbrium",
+    "highlight": "First Chinese soft landing; LPR & VNIS in-situ basalt analysis",
+    "traverse_waypoints": [
+      {
+        "step": 0,
+        "name": "Landing Point (Statio Guang Han Gong)",
+        "dlat": 0.0,
+        "dlon": 0.0,
+        "dist_m": 0,
+        "day": 1,
+        "target": "Lander Deployment"
+      },
+      {
+        "step": 1,
+        "name": "Waypoint N101",
+        "dlat": 8e-05,
+        "dlon": -0.0001,
+        "dist_m": 12.4,
+        "day": 1,
+        "target": "PCAM Mutual Imaging"
+      },
+      {
+        "step": 2,
+        "name": "Waypoint N104",
+        "dlat": 0.00018,
+        "dlon": -0.00025,
+        "dist_m": 31.0,
+        "day": 1,
+        "target": "VNIS Soil Spectrum 1"
+      },
+      {
+        "step": 3,
+        "name": "Waypoint N107",
+        "dlat": 0.00028,
+        "dlon": -0.00042,
+        "dist_m": 54.2,
+        "day": 1,
+        "target": "LPR Regolith Profiling"
+      },
+      {
+        "step": 4,
+        "name": "Waypoint N203",
+        "dlat": 0.00035,
+        "dlon": -0.00065,
+        "dist_m": 82.5,
+        "day": 2,
+        "target": "Zi Wei Crater Rim Basalt"
+      },
+      {
+        "step": 5,
+        "name": "Waypoint N209 (Final Stop)",
+        "dlat": 0.00042,
+        "dlon": -0.00091,
+        "dist_m": 114.8,
+        "day": 2,
+        "target": "Pyroxene & Olivine APXS Analysis"
+      }
+    ]
+  },
+  {
+    "id": "CE-4",
+    "body": "Moon",
+    "mission": "Chang'e-4",
+    "vehicle": "Lander & Yutu-2 Rover",
+    "country": "China (CNSA)",
+    "lat": -45.457,
+    "lon": 177.588,
+    "elevation_m": -5930,
+    "year": 2019,
+    "color": "#f77f00",
+    "region": "Von K\u00e1rm\u00e1n Crater (Farside SPA Basin)",
+    "highlight": "First ever landing on the lunar farside; >1,600m traverse exploring SPA mantle excavata",
+    "traverse_waypoints": [
+      {
+        "step": 0,
+        "name": "Landing Site",
+        "dlat": 0.0,
+        "dlon": 0.0,
+        "dist_m": 0,
+        "day": 1,
+        "target": "Farside Touchdown"
+      },
+      {
+        "step": 1,
+        "name": "Site LE00101",
+        "dlat": -0.00012,
+        "dlon": -0.00015,
+        "dist_m": 19.5,
+        "day": 1,
+        "target": "Lander-Rover Stereo Imaging"
+      },
+      {
+        "step": 2,
+        "name": "Site LE00204",
+        "dlat": -0.00035,
+        "dlon": -0.00045,
+        "dist_m": 68.2,
+        "day": 2,
+        "target": "VNIS Farside Soil 1"
+      },
+      {
+        "step": 3,
+        "name": "Site LE00508",
+        "dlat": -0.00085,
+        "dlon": -0.0011,
+        "dist_m": 178.5,
+        "day": 5,
+        "target": "Crater C1 Ejecta Boulders"
+      },
+      {
+        "step": 4,
+        "name": "Site LE01202",
+        "dlat": -0.0017,
+        "dlon": -0.0022,
+        "dist_m": 380.0,
+        "day": 12,
+        "target": "Impact Melt & Glassy Spherules"
+      },
+      {
+        "step": 5,
+        "name": "Site LE02506",
+        "dlat": -0.0035,
+        "dlon": -0.0048,
+        "dist_m": 790.2,
+        "day": 25,
+        "target": "Zhinyu Crater Ejecta Blanket"
+      },
+      {
+        "step": 6,
+        "name": "Site LE03801",
+        "dlat": -0.0051,
+        "dlon": -0.0071,
+        "dist_m": 1180.5,
+        "day": 38,
+        "target": "Mysterious Cube / Rock Spire"
+      },
+      {
+        "step": 7,
+        "name": "Site LE05504",
+        "dlat": -0.0068,
+        "dlon": -0.0099,
+        "dist_m": 1610.0,
+        "day": 55,
+        "target": "Finsen Crater Regolith Interface"
+      }
+    ]
+  },
+  {
+    "id": "CE-5",
+    "body": "Moon",
+    "mission": "Chang'e-5",
+    "vehicle": "Lander & Ascender",
+    "country": "China (CNSA)",
+    "lat": 43.058,
+    "lon": -51.916,
+    "elevation_m": -2570,
+    "year": 2020,
+    "color": "#fcbf49",
+    "region": "Mons R\u00fcmker / Oceanus Procellarum",
+    "highlight": "Returned 1,731g of 2.0 Ga youngest lunar basalts; in-situ LMS detected OH/H2O signals",
+    "traverse_waypoints": [
+      {
+        "step": 0,
+        "name": "Statio Tianchuan Touchdown",
+        "dlat": 0.0,
+        "dlon": 0.0,
+        "dist_m": 0,
+        "day": 1,
+        "target": "LMS Ambient Regolith Scan"
+      },
+      {
+        "step": 1,
+        "name": "Drill Site D1",
+        "dlat": 2e-05,
+        "dlon": 1e-05,
+        "dist_m": 1.2,
+        "day": 1,
+        "target": "LRPR 2m Core Structural Verification"
+      },
+      {
+        "step": 2,
+        "name": "Scoop Region S1-S8",
+        "dlat": -1e-05,
+        "dlon": 3e-05,
+        "dist_m": 2.5,
+        "day": 1,
+        "target": "LMS Hydroxyl Band Analysis"
+      },
+      {
+        "step": 3,
+        "name": "Ascent Liftoff",
+        "dlat": 0.0,
+        "dlon": 0.0,
+        "dist_m": 0,
+        "day": 2,
+        "target": "Ascender Lunar Orbit Rendezvous"
+      }
+    ]
+  },
+  {
+    "id": "CE-6",
+    "body": "Moon",
+    "mission": "Chang'e-6",
+    "vehicle": "Lander & Ascender",
+    "country": "China (CNSA)",
+    "lat": -41.638,
+    "lon": -153.985,
+    "elevation_m": -5250,
+    "year": 2024,
+    "color": "#d62828",
+    "region": "Apollo Basin (Farside SPA Basin)",
+    "highlight": "First farside sample return in history (1,935.3g); DORN & NILS international payloads",
+    "traverse_waypoints": [
+      {
+        "step": 0,
+        "name": "Statio Tianhe Touchdown",
+        "dlat": 0.0,
+        "dlon": 0.0,
+        "dist_m": 0,
+        "day": 1,
+        "target": "Farside Sample Site Inspection"
+      },
+      {
+        "step": 1,
+        "name": "Drilling & Scooping",
+        "dlat": 1e-05,
+        "dlon": 2e-05,
+        "dist_m": 1.5,
+        "day": 1,
+        "target": "LMS Spectroscopy & DORN Radon Tracking"
+      },
+      {
+        "step": 2,
+        "name": "Mini-Rover Selfie & Flag",
+        "dlat": 8e-05,
+        "dlon": 0.0001,
+        "dist_m": 12.0,
+        "day": 2,
+        "target": "Autonomous Mini-Rover Imaging"
+      }
+    ]
+  },
+  {
+    "id": "Apollo-11",
+    "body": "Moon",
+    "mission": "Apollo 11",
+    "vehicle": "LM Eagle",
+    "country": "USA (NASA)",
+    "lat": 0.674,
+    "lon": 23.473,
+    "elevation_m": -1500,
+    "year": 1969,
+    "color": "#4361ee",
+    "region": "Mare Tranquillitatis",
+    "highlight": "First human lunar landing (21.55 kg samples returned)"
+  },
+  {
+    "id": "Apollo-17",
+    "body": "Moon",
+    "mission": "Apollo 17",
+    "vehicle": "LM Challenger & LRV",
+    "country": "USA (NASA)",
+    "lat": 20.191,
+    "lon": 30.772,
+    "elevation_m": -2500,
+    "year": 1972,
+    "color": "#4cc9f0",
+    "region": "Taurus-Littrow Valley",
+    "highlight": "Final Apollo mission; LRV traversed 35.7 km; orange pyroclastic soil discovery"
+  },
+  {
+    "id": "Zhurong",
+    "body": "Mars",
+    "mission": "Tianwen-1",
+    "vehicle": "Zhurong Rover",
+    "country": "China (CNSA)",
+    "lat": 25.066,
+    "lon": 109.925,
+    "elevation_m": -4100,
+    "year": 2021,
+    "color": "#e76f51",
+    "region": "Southern Utopia Planitia",
+    "highlight": "First Chinese Mars rover; 1,921m traverse revealing paleoflood subsurface stratigraphy and hydrated minerals",
+    "traverse_waypoints": [
+      {
+        "step": 0,
+        "name": "Landing Platform",
+        "dlat": 0.0,
+        "dlon": 0.0,
+        "dist_m": 0,
+        "sol": 1,
+        "target": "Touchdown & Ramp Roll-off"
+      },
+      {
+        "step": 1,
+        "name": "Drop Camera Selfie Site",
+        "dlat": 0.00015,
+        "dlon": 0.0002,
+        "dist_m": 25.0,
+        "sol": 15,
+        "target": "Wireless Drop-Camera Rover Selfie"
+      },
+      {
+        "step": 2,
+        "name": "Parachute & Backshell Inspection",
+        "dlat": 0.0012,
+        "dlon": 0.0018,
+        "dist_m": 240.0,
+        "sol": 60,
+        "target": "NaTeCam Entry Hardware Imaging"
+      },
+      {
+        "step": 3,
+        "name": "Transverse Aeolian Ridge Dune 1",
+        "dlat": 0.0028,
+        "dlon": 0.0035,
+        "dist_m": 580.0,
+        "sol": 120,
+        "target": "RoRAD Dune Subsurface Bedforms"
+      },
+      {
+        "step": 4,
+        "name": "Polygonal Terrain & Duricrust",
+        "dlat": 0.0049,
+        "dlon": 0.0062,
+        "dist_m": 1120.0,
+        "sol": 210,
+        "target": "MarSCoDe LIBS Hydrated Sulfate Target"
+      },
+      {
+        "step": 5,
+        "name": "Crater Etched Layer",
+        "dlat": 0.0071,
+        "dlon": 0.0089,
+        "dist_m": 1560.0,
+        "sol": 280,
+        "target": "RoRAD 80m Flood Layer Interface"
+      },
+      {
+        "step": 6,
+        "name": "Winter Hibernation Site",
+        "dlat": 0.0088,
+        "dlon": 0.0112,
+        "dist_m": 1921.0,
+        "sol": 358,
+        "target": "RoMAG Final Magnetometry Survey"
+      }
+    ]
+  },
+  {
+    "id": "Perseverance",
+    "body": "Mars",
+    "mission": "Mars 2020",
+    "vehicle": "Perseverance Rover",
+    "country": "USA (NASA)",
+    "lat": 18.445,
+    "lon": 77.451,
+    "elevation_m": -2500,
+    "year": 2021,
+    "color": "#3a86ff",
+    "region": "Jezero Crater Delta",
+    "highlight": "Exploration of river delta paleolake deposits with RIMFAX radar and SuperCam"
+  },
+  {
+    "id": "Curiosity",
+    "body": "Mars",
+    "mission": "MSL",
+    "vehicle": "Curiosity Rover",
+    "country": "USA (NASA)",
+    "lat": -4.589,
+    "lon": 137.441,
+    "elevation_m": -4500,
+    "year": 2012,
+    "color": "#8338ec",
+    "region": "Gale Crater (Mount Sharp)",
+    "highlight": "Longest active Mars rover; explored lacustrine mudstones and clay-sulfate transitions"
+  }
+]

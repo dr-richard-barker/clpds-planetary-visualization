@@ -1,0 +1,55 @@
+\section{Results}
+
+\subsection{Cross-Mission 3D Planetary Geodesy and Traverse Modeling}
+
+Our suite reconstructs planetary landing sites and rover traverses on high-fidelity 3D Moon and Mars celestial bodies rendered via WebGL. Landing sites are georeferenced using IAU/IAG planetary coordinates:
+\begin{itemize}
+    \item \textbf{Chang'e-3}: $44.115^\circ\text{N}, 19.515^\circ\text{W}$, elevation $-2,640\text{ m}$ (Mare Imbrium);
+    \item \textbf{Chang'e-4}: $45.457^\circ\text{S}, 177.588^\circ\text{E}$, elevation $-5,930\text{ m}$ (Von K\'{a}rm\'{a}n crater, SPA basin);
+    \item \textbf{Chang'e-5}: $43.058^\circ\text{N}, 51.916^\circ\text{W}$, elevation $-2,570\text{ m}$ (Mons R\"{u}mker);
+    \item \textbf{Chang'e-6}: $41.638^\circ\text{S}, 153.985^\circ\text{W}$, elevation $-5,250\text{ m}$ (Apollo basin);
+    \item \textbf{Tianwen-1 Zhurong}: $25.066^\circ\text{N}, 109.925^\circ\text{E}$, elevation $-4,100\text{ m}$ (Southern Utopia Planitia).
+\end{itemize}
+
+For mobile missions (Chang'e-3 \textit{Yutu}, Chang'e-4 \textit{Yutu-2}, and Tianwen-1 \textit{Zhurong}), discrete waypoint coordinates, local rover headings, cumulative distance traveled, and scientific imaging stops are interconnected via Catmull-Rom spline curves.
+
+\subsection{Subsurface Radar Stratigraphy and Dielectric Permittivity Slicing}
+
+Ground-penetrating radar (GPR) observations from the Lunar Penetrating Radar (LPR Channel 2B, 500~MHz) on Chang'e-4 and the Rover Subsurface Penetrating Radar (RoRAD Channel 1, 15--35~MHz) on Zhurong were calibrated to generate interactive 2D B-scan echograms.
+
+The physical subsurface depth $d$ is derived from two-way radar travel time $t$ via the relative dielectric permittivity $\varepsilon_r$:
+\begin{equation}
+    v = \frac{c}{\sqrt{\varepsilon_r}}, \quad d = \frac{v \cdot t}{2} = \frac{c \cdot t}{2\sqrt{\varepsilon_r}}
+    \label{eq:radar_depth}
+\end{equation}
+where $c \approx 0.29979\text{ m/ns}$ is the speed of light in vacuum.
+
+For the Chang'e-4 farside profile in Von K\'{a}rm\'{a}n crater, adopting $\varepsilon_r = 3.2$ ($v \approx 0.168\text{ m/ns}$) reveals three distinct stratigraphic units (Figure~\ref{fig:stratigraphy}):
+\begin{enumerate}
+    \item \textbf{Unit 1 ($0\text{--}12\text{ m}$)}: Homogeneous, fine-grained ejecta blanket deposited by the Finsen impact crater, characterized by high porosity ($~45\text{--}55\%$) and minimal radar attenuation.
+    \item \textbf{Unit 2 ($12\text{--}25\text{ m}$)}: Heterogeneous coarse ejecta containing excavated basaltic boulders ($0.2\text{--}1.5\text{ m}$ diameter), producing pronounced parabolic scattering hyperbolas.
+    \item \textbf{Unit 3 ($25\text{--}42\text{ m}$)}: Weathered ancient mare basalt paleoregolith pre-dating the Finsen impact event.
+\end{enumerate}
+
+In Utopia Planitia on Mars, RoRAD data ($\varepsilon_r = 3.5$, $v \approx 0.160\text{ m/ns}$) reveals a duricrust cap ($0\text{--}10\text{ m}$) underlain by two catastrophic paleoflood sedimentary units: Late Amazonian fining-upward gravel/sand sequences ($10\text{--}34\text{ m}$) and an Early Amazonian/Hesperian high-energy debrite sequence ($34\text{--}80\text{ m}$).
+
+\subsection{In-Situ Mineralogy, Hydroxyl Detection, and LIBS Emission Spectroscopy}
+
+The spectroscopy module provides automated continuum removal for Vis-NIR reflectance spectra ($450\text{--}3,200\text{ nm}$) captured by the VNIS (Chang'e-3/4) and LMS (Chang'e-5/6) instruments:
+\begin{equation}
+    R_c(\lambda) = \frac{R(\lambda)}{C(\lambda)}
+    \label{eq:continuum}
+\end{equation}
+where $C(\lambda)$ is the upper convex hull continuum line.
+
+The Chang'e-4 VNIS spectra exhibit strong crystal field absorption bands at $950\text{ nm}$ (Band I) and $1,950\text{ nm}$ (Band II), diagnostic of low-calcium pyroxenes (orthopyroxenes) alongside a composite $1,050\text{ nm}$ olivine shoulder, confirming deep mantle excavations by the SPA basin impact.
+
+In contrast, Chang'e-5 LMS spectra exhibit high-calcium clinopyroxene features ($1,020\text{ nm}$ and $2,150\text{ nm}$) coupled with a distinct hydroxyl ($OH/\text{H}_2\text{O}$) fundamental absorption band centered at $2,850\text{ nm}$, providing direct in-situ confirmation of indigenous water in young lunar mare basalts.
+
+The MarSCoDe LIBS module resolves atomic emission lines across $240\text{--}850\text{ nm}$, identifying primary rock-forming and volatile elements on Mars: $\text{Si~I}$ ($288.16\text{ nm}$), $\text{Mg~II}$ ($279.55\text{ nm}$), $\text{Fe~I/II}$ ($274.93, 404.58\text{ nm}$), $\text{Ca~II}$ ($393.37\text{ nm}$), $\text{Ti~I}$ ($334.94\text{ nm}$), $\text{Na~I}$ ($588.99\text{ nm}$), $\text{K~I}$ ($766.49\text{ nm}$), and the hydrogen Balmer $\text{H}_\alpha$ line ($656.28\text{ nm}$), indicating hydrated sulfate duricrust.
+
+\subsection{Martian Boundary Layer Meteorology and Space Radiation Environment}
+
+The Mars Climate Station (MCS) dashboard models the diurnal atmospheric boundary layer in Utopia Planitia over 24 Local True Solar Time (LTST) hours. The diurnal cycle displays an air temperature range from $-82.5^\circ\text{C}$ (05:30 LTST) to $-14.2^\circ\text{C}$ (14:00 LTST), with ground surface temperatures reaching $+5.3^\circ\text{C}$ at solar noon. Semi-diurnal thermal atmospheric tides induce pressure oscillations between $748\text{ Pa}$ and $788\text{ Pa}$.
+
+Surface magnetometry recorded by Zhurong's dual fluxgate magnetometers (RoMAG) indicates localized crustal magnetic anomalies ranging from $95\text{ nT}$ to $165\text{ nT}$ along the 1,921~m traverse, corroborating extensive thermal demagnetization in the northern lowlands. Concurrently, lunar farside radiation dosimetry (Chang'e-4 LND) records Galactic Cosmic Ray (GCR) and secondary albedo neutron dose equivalent rates of $57.0 \pm 8.0~\mu\text{Sv/h}$ ($1.369\text{ mSv/day}$), providing essential baseline data for future human habitat shielding.

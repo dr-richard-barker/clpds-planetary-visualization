@@ -1,0 +1,32 @@
+title: "CLPDS Planetary Visualization"
+description: "Interactive In-Situ Science and Stratigraphy of China's Lunar and Mars Missions (CLPDS)"
+baseurl: "/clpds-planetary-visualization"
+url: "https://dr-richard-barker.github.io"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
+
+navigation:
+  - title: Home
+    url: /
+  - title: 3D Planetary Globe
+    url: /globe/
+  - title: Subsurface Radar
+    url: /radar/
+  - title: Spectroscopy & LIBS
+    url: /spectroscopy/
+  - title: Mars Weather
+    url: /climate/
+  - title: Data Explorer
+    url: /data/
+  - title: Publications
+    url: /publications/
+  - title: GitHub
+    url: https://github.com/dr-richard-barker/clpds-planetary-visualization
+
+author:
+  name: "Richard Barker, Adriana Kaley Sanchez, Manisha Dagar, Katrina Boland, Cauê Sciascia Borlina, D. Marshall Porterfield"
+  affiliation: "Purdue University"

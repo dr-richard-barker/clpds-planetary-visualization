@@ -1,0 +1,78 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!70!black,
+  urlcolor=blue!70!black
+}
+
+\title{\textbf{Supplementary Information for:}\\
+CLPDS Planetary Exploration Data Visualization Suite: Interactive In-Situ Science and Stratigraphy of China's Lunar and Mars Missions}
+
+\author{
+  Richard Barker$^{1,*}$, Adriana Kaley Sanchez$^1$, Manisha Dagar$^1$,\\
+  Katrina Boland$^1$, Cau\^{e} Sciascia Borlina$^2$, D.~Marshall Porterfield$^1$\\
+  \small $^1$Department of Agricultural and Biological Engineering, Purdue University, West Lafayette, IN 47907, USA\\
+  \small $^2$Department of Earth, Atmospheric, and Planetary Sciences, Purdue University, West Lafayette, IN 47907, USA\\
+  \small $^*$Corresponding author: \texttt{rbarker2@purdue.edu}
+}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Supplementary Tables}
+
+\subsection{CLPDS Mission Instrument Summary}
+\begin{table}[h!]
+\centering
+\small
+\begin{tabularx}{\textwidth}{llllX}
+\toprule
+\textbf{Mission} & \textbf{Vehicle} & \textbf{Instrument} & \textbf{Type} & \textbf{Science Target} \\
+\midrule
+Chang'e-1 & Orbiter & CCD / LAM & Optical / Lidar & Global 120m DEM and 3D terrain \\
+Chang'e-1 & Orbiter & CELMS & Microwave & Global regolith brightness temp \\
+Chang'e-2 & Orbiter & CCD & Optical & 7m global / 1.3m Toutatis flyby \\
+Chang'e-3 & Rover (\textit{Yutu}) & LPR & 60 / 500 MHz GPR & Mare Imbrium subsurface stratigraphy \\
+Chang'e-3 & Rover & VNIS & Vis-NIR & In-situ basalt mineralogy \\
+Chang'e-4 & Lander & LND & Dosimeter & Farside radiation equivalent dose \\
+Chang'e-4 & Rover (\textit{Yutu-2}) & LPR & 500 MHz GPR & Farside SPA ejecta blanket ($\sim 40$m) \\
+Chang'e-4 & Rover & VNIS & Vis-NIR & Mantle-excavated low-Ca pyroxenes \\
+Chang'e-5 & Lander & LMS & Vis-SWIR & In-situ hydroxyl/water ($2.85~\mu$m) \\
+Chang'e-5 & Lander & LRPR & 2 GHz GPR & Drill site core structural integrity \\
+Chang'e-6 & Lander & LMS / DORN & Vis-SWIR / Radon & Farside SPA samples and exosphere \\
+Tianwen-1 & Rover (\textit{Zhurong}) & RoRAD & 15--35 MHz GPR & Utopia Planitia paleoflood layers \\
+Tianwen-1 & Rover & MarSCoDe & LIBS Laser & Hydrated sulfates and duricrust \\
+Tianwen-1 & Rover & RoMAG & Magnetometer & Surface crustal magnetic field \\
+Tianwen-1 & Rover & MCS & Meteorology & Diurnal temperature, pressure, wind \\
+\bottomrule
+\end{tabularx}
+\caption{Comprehensive summary of primary scientific payloads across CLPDS missions.}
+\label{tab:instruments}
+\end{table}
+
+\section{Supplementary Notes}
+
+\subsection{Supplementary Note 1: Data Level Mapping}
+In CLPDS, data levels adhere to international PDS standards:
+\begin{itemize}
+    \item \textbf{Level 0}: Raw telemetry frames received from deep space ground stations (BJ/KM/SY/MD stations);
+    \item \textbf{Level 1}: Unpacked, decompressed telemetry with auxiliary ephemeris and geometry;
+    \item \textbf{Level 2 (2A, 2B, 2C)}: Radiometrically calibrated physical units (reflectance factor, dielectric echoes in ns, electric field mV/m);
+    \item \textbf{Level 3}: Georeferenced, orthorectified products (DOM, DEM, stereopairs);
+    \item \textbf{Level 4}: Global mosaics, thematic maps, and integrated multispectral cubes.
+\end{itemize}
+
+\end{document}

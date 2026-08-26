@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLPDS Planetary Exploration Suite | China's Lunar & Mars Data</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Three.js module importmap -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand-section">
+      <div class="brand-badge">CLPDS</div>
+      <div>
+        <div class="brand-title">Planetary Exploration Visualization Suite</div>
+        <div class="brand-subtitle">Scientific Analysis & Visualizer for China's Lunar & Planetary Data System</div>
+      </div>
+    </div>
+
+    <div class="header-stats">
+      <div class="stat-chip">
+        <span>Missions:</span>
+        <span class="stat-value">7 (CE-1 to 6, TW-1)</span>
+      </div>
+      <div class="stat-chip">
+        <span>Returned Samples:</span>
+        <span class="stat-value">3,666.3 g</span>
+      </div>
+      <div class="stat-chip">
+        <span>Farside Landings:</span>
+        <span class="stat-value">2 (CE-4, CE-6)</span>
+      </div>
+      <div class="stat-chip">
+        <span>Mars Traverse:</span>
+        <span class="stat-value">1,921 m (Zhurong)</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-tabs">
+    <button class="nav-btn active" data-tab="tab-globe">
+      <span>🌍</span> 3D Globe & Landing Sites
+    </button>
+    <button class="nav-btn" data-tab="tab-radargram">
+      <span>📡</span> Subsurface Radargram (GPR)
+    </button>
+    <button class="nav-btn" data-tab="tab-spectroscopy">
+      <span>🔬</span> Spectroscopy & LIBS Lab
+    </button>
+    <button class="nav-btn" data-tab="tab-climate">
+      <span>🌪️</span> Mars Weather & Geophysics
+    </button>
+    <button class="nav-btn" data-tab="tab-catalog">
+      <span>📚</span> Mission Science Matrix
+    </button>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="main-container">
+
+    <!-- Tab 1: 3D Globe & Landing Sites -->
+    <section id="tab-globe" class="tab-pane active">
+      <div class="grid-2col">
+        <!-- Globe Canvas Container -->
+        <div class="globe-wrapper">
+          <div id="globe-canvas-container"></div>
+          
+          <!-- Overlay Controls -->
+          <div class="globe-overlay-controls">
+            <div style="font-size:0.75rem;font-weight:700;color:var(--text-secondary);text-transform:uppercase;">Planetary Body</div>
+            <div class="globe-body-toggle">
+              <button id="btn-body-moon" class="body-btn active">🌙 Moon</button>
+              <button id="btn-body-mars" class="body-btn">🔴 Mars</button>
+            </div>
+            
+            <div style="font-size:0.75rem;font-weight:700;color:var(--text-secondary);margin-top:0.4rem;text-transform:uppercase;">Quick Fly-To Site</div>
+            <div id="globe-site-pills" class="quick-site-selector"></div>
+          </div>
+        </div>
+
+        <!-- Site & Traverse Details Panel -->
+        <div class="site-details-panel">
+          <div class="mission-hero-card">
+            <div class="mission-hero-header">
+              <div>
+                <h2 id="site-hero-name" style="font-size:1.15rem;color:#f8fafc;">Chang'e-4 — Yutu-2 Rover</h2>
+                <div id="site-hero-region" style="font-size:0.8rem;color:var(--accent-cyan);margin-top:0.15rem;">Von Kármán Crater (SPA Basin)</div>
+              </div>
+              <span id="site-hero-tag" class="mission-tag tag-moon">Moon</span>
+            </div>
+
+            <p id="site-hero-highlight" style="font-size:0.82rem;color:#cbd5e1;line-height:1.4;">
+              First ever landing on the lunar farside; >1,600m traverse exploring South Pole-Aitken basin mantle materials.
+            </p>
+
+            <table class="detail-table">
+              <tr>
+                <td class="label">Coordinates</td>
+                <td id="site-hero-coords" class="val">45.457°S, 177.588°E</td>
+              </tr>
+              <tr>
+                <td class="label">Elevation</td>
+                <td id="site-hero-elev" class="val">-5,930 m</td>
+              </tr>
+              <tr>
+                <td class="label">Landing Year</td>
+                <td id="site-hero-year" class="val">2019</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Waypoints Timeline -->
+          <div class="glass-card" style="flex:1;">
+            <div class="card-header">
+              <div class="card-title">
+                <span>📍</span> Traverse Waypoints & Milestones
+              </div>
+            </div>
+            <div id="site-waypoints-list" class="waypoints-container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Subsurface Radargram Studio -->
+    <section id="tab-radargram" class="tab-pane">
+      <div class="radar-controls-bar">
+        <div class="control-item">
+          <label for="radar-mission-select">Radar Dataset:</label>
+          <select id="radar-mission-select">
+            <option value="lunar_change_4">Chang'e-4 LPR (Lunar Farside 500 MHz, 0–40m)</option>
+            <option value="mars_zhurong">Tianwen-1 Zhurong RoRAD (Utopia Planitia 25 MHz, 0–80m)</option>
+          </select>
+        </div>
+
+        <div class="control-item">
+          <label for="radar-cmap-select">Colormap:</label>
+          <select id="radar-cmap-select">
+            <option value="seismic">Seismic (Red-Blue)</option>
+            <option value="grayscale">Grayscale / Density</option>
+            <option value="viridis">Viridis</option>
+            <option value="magma">Magma</option>
+            <option value="cyan">Cyan Glow</option>
+          </select>
+        </div>
+
+        <div class="control-item">
+          <label for="radar-gain-slider">Gain:</label>
+          <input type="range" id="radar-gain-slider" min="0.5" max="4.0" step="0.1" value="1.6">
+          <span id="radar-gain-val" style="font-family:var(--font-mono);font-size:0.8rem;">1.6x</span>
+        </div>
+
+        <div class="control-item">
+          <label for="radar-eps-slider">Dielectric Permittivity (εᵣ):</label>
+          <input type="range" id="radar-eps-slider" min="2.0" max="8.0" step="0.1" value="3.2">
+          <span id="radar-eps-val" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--accent-cyan);">3.2</span>
+        </div>
+
+        <div class="control-item">
+          <label>
+            <input type="checkbox" id="radar-toggle-layers" checked> Show Geological Layers
+          </label>
+        </div>
+      </div>
+
+      <div style="background:rgba(15,23,42,0.85);padding:0.4rem 0.8rem;border:1px solid var(--border-color);border-radius:var(--radius-sm);margin-bottom:0.75rem;font-size:0.8rem;font-family:var(--font-mono);" id="radar-live-readout">
+        Hover crosshair over radargram echogram to inspect trace depth, travel time, and stratigraphy...
+      </div>
+
+      <div class="radar-canvas-box">
+        <canvas id="radargram-canvas"></canvas>
+        <div class="radar-sidebar-layers">
+          <div style="font-size:0.85rem;font-weight:700;color:var(--text-primary);margin-bottom:0.75rem;">
+            Stratigraphic Units
+          </div>
+          <div id="radar-layers-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: Spectroscopy & LIBS Lab -->
+    <section id="tab-spectroscopy" class="tab-pane">
+      <div class="grid-2col">
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span>🔬</span> Multi-Spectral Reflectance & LIBS Emission
+            </div>
+            <div style="display:flex;gap:0.4rem;align-items:center;">
+              <button id="btn-spec-refl" class="body-btn active">Vis-NIR Reflectance</button>
+              <button id="btn-spec-libs" class="body-btn">Zhurong LIBS Laser</button>
+            </div>
+          </div>
+
+          <div id="spec-cr-wrapper" style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;font-size:0.82rem;">
+            <label style="cursor:pointer;">
+              <input type="checkbox" id="spec-continuum-chk"> Remove Spectral Continuum (Convex Hull Normalization)
+            </label>
+          </div>
+
+          <div class="spec-plot-container">
+            <canvas id="spectroscopy-canvas"></canvas>
+          </div>
+
+          <div id="spec-sample-toggles" class="spec-legend"></div>
+        </div>
+
+        <!-- Mineralogical & Elemental Features -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span>💎</span> Absorption Bands & Elements
+            </div>
+          </div>
+          <div id="spec-features-list" class="spec-features-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: Mars Weather & Geophysics -->
+    <section id="tab-climate" class="tab-pane">
+      <div class="grid-split">
+        <!-- Live Instrument Gauges -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span>🌡️</span> Mars Climate Station (MCS) — Live Sol Diurnal Cycle
+            </div>
+            <div id="climate-live-time" style="font-family:var(--font-mono);font-size:0.85rem;color:var(--accent-gold);">
+              12:00 LTST
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label style="font-size:0.8rem;color:var(--text-secondary);display:block;margin-bottom:0.3rem;">
+              Local True Solar Time (LTST) Diurnal Scrub:
+            </label>
+            <input type="range" id="climate-time-slider" min="0" max="96" value="48" style="width:100%;">
+          </div>
+
+          <div class="grid-split" style="margin-bottom:1rem;">
+            <div class="glass-card" style="padding:0.75rem;background:rgba(255,255,255,0.02);">
+              <div style="font-size:0.75rem;color:var(--text-secondary);">Air Temperature</div>
+              <div id="climate-live-tair" style="font-size:1.3rem;font-weight:700;color:var(--accent-cyan);font-family:var(--font-mono);">-42.5 °C</div>
+            </div>
+            <div class="glass-card" style="padding:0.75rem;background:rgba(255,255,255,0.02);">
+              <div style="font-size:0.75rem;color:var(--text-secondary);">Ground Temperature</div>
+              <div id="climate-live-tgnd" style="font-size:1.3rem;font-weight:700;color:var(--accent-mars);font-family:var(--font-mono);">-22.8 °C</div>
+            </div>
+            <div class="glass-card" style="padding:0.75rem;background:rgba(255,255,255,0.02);">
+              <div style="font-size:0.75rem;color:var(--text-secondary);">Atmospheric Pressure</div>
+              <div id="climate-live-pres" style="font-size:1.3rem;font-weight:700;color:var(--accent-blue);font-family:var(--font-mono);">765.2 Pa</div>
+            </div>
+            <div class="glass-card" style="padding:0.75rem;background:rgba(255,255,255,0.02);">
+              <div style="font-size:0.75rem;color:var(--text-secondary);">Wind Velocity</div>
+              <div id="climate-live-wind" style="font-size:1.3rem;font-weight:700;color:var(--accent-gold);font-family:var(--font-mono);">6.2 m/s (210°)</div>
+            </div>
+          </div>
+
+          <!-- Wind Compass -->
+          <div class="wind-compass-wrapper">
+            <div class="compass-dial">
+              <span class="compass-label n">N</span>
+              <span class="compass-label s">S</span>
+              <span class="compass-label e">E</span>
+              <span class="compass-label w">W</span>
+              <div id="compass-needle" class="compass-arrow">
+                <div class="compass-needle-point"></div>
+              </div>
+              <div class="compass-center-dot"></div>
+            </div>
+            <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem;">Surface Wind Azimuth Vector</div>
+          </div>
+        </div>
+
+        <!-- Timeseries Chart -->
+        <div class="glass-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span>📈</span> Geophysics & Planetary Timeseries
+            </div>
+            <div style="display:flex;gap:0.3rem;">
+              <button class="body-btn climate-metric-btn active" data-metric="temperature">Temp</button>
+              <button class="body-btn climate-metric-btn" data-metric="pressure">Pressure</button>
+              <button class="body-btn climate-metric-btn" data-metric="magnetometer">RoMAG |B|</button>
+              <button class="body-btn climate-metric-btn" data-metric="radiation">LND Dose</button>
+            </div>
+          </div>
+
+          <div style="height:340px;position:relative;">
+            <canvas id="climate-chart-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 5: Mission Science Matrix & Catalog -->
+    <section id="tab-catalog" class="tab-pane">
+      <div class="glass-card" style="margin-bottom:1.25rem;">
+        <h2 style="font-size:1.2rem;margin-bottom:0.4rem;">China Lunar & Planetary Data System (CLPDS) Mission Catalog</h2>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.5;">
+          The official repository archives raw and calibrated scientific data (PDS3 / PDS4) across 7 planetary vehicles exploring the Moon and Mars.
+        </p>
+      </div>
+
+      <div id="mission-catalog-grid" class="grid-3col"></div>
+    </section>
+
+  </main>
+
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>

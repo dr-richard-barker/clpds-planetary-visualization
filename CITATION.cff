@@ -1,0 +1,95 @@
+cff-version: 1.2.0
+title: >-
+  CLPDS Planetary Exploration Data Visualization Suite: Interactive
+  In-Situ Science and Stratigraphy of China's Lunar and Mars Missions
+message: >-
+  If you use this software or data suite in your research, please
+  cite it using the metadata from this file.
+type: software
+authors:
+  - family-names: Barker
+    given-names: Richard
+    affiliation: Purdue University
+    orcid: "https://orcid.org/0000-0002-6908-1634"
+  - family-names: Sanchez
+    given-names: Adriana Kaley
+    affiliation: Purdue University
+  - family-names: Dagar
+    given-names: Manisha
+    affiliation: Purdue University
+  - family-names: Boland
+    given-names: Katrina
+    affiliation: Purdue University
+  - family-names: Borlina
+    given-names: Cauê Sciascia
+    affiliation: Purdue University
+  - family-names: Porterfield
+    given-names: D. Marshall
+    affiliation: Purdue University
+repository-code: "https://github.com/dr-richard-barker/clpds-planetary-visualization"
+url: "https://dr-richard-barker.github.io/clpds-planetary-visualization"
+abstract: >-
+  FAIR-compliant open-source data processing pipeline and WebGL
+  visualization suite for China's Lunar and Planetary Data System
+  (CLPDS), covering Chang'e-1 through 6 lunar missions and Tianwen-1
+  Zhurong Mars rover data. Integrates 3D planetary globes, ground-penetrating
+  radar subsurface stratigraphy (LPR and RoRAD), Vis-NIR and LIBS
+  spectroscopy laboratories, and Martian weather timeseries.
+keywords:
+  - CLPDS
+  - Chang'e mission
+  - Tianwen-1
+  - Zhurong rover
+  - Lunar Penetrating Radar
+  - RoRAD
+  - Spectroscopy
+  - LIBS
+  - Planetary Science
+  - FAIR data
+license: CC-BY-4.0
+version: 1.0.0
+date-released: "2026-08-26"
+doi: "10.5281/zenodo.XXXXXXX"
+references:
+  - type: article
+    title: "Layered subsurface in Utopia Planitia on Mars"
+    authors:
+      - family-names: Zhang
+        given-names: L.
+      - family-names: Zhou
+        given-names: B.
+      - family-names: Lin
+        given-names: Y.
+    journal: Nature
+    volume: 610
+    pages: 301-307
+    year: 2022
+    doi: "10.1038/s41586-022-05147-5"
+  - type: article
+    title: "First panoramic view of the lunar farside subsurface"
+    authors:
+      - family-names: Lai
+        given-names: J.
+      - family-names: Xu
+        given-names: Y.
+      - family-names: Bugiolacchi
+        given-names: R.
+    journal: Science Advances
+    volume: 6
+    pages: eaaz1704
+    year: 2020
+    doi: "10.1126/sciadv.aaz1704"
+  - type: article
+    title: "In situ detection of water on the Moon by the Chang'e-5 lander"
+    authors:
+      - family-names: Li
+        given-names: C.
+      - family-names: Liu
+        given-names: J.
+      - family-names: Ren
+        given-names: X.
+    journal: Nature Communications
+    volume: 13
+    pages: 87
+    year: 2022
+    doi: "10.1038/s41467-022-28069-7"

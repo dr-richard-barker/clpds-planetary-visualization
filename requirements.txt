@@ -1,0 +1,9 @@
+# Core scientific packages
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+
+# Optional visualization & server tools
+jupyterlab>=4.0.0
+requests>=2.31.0

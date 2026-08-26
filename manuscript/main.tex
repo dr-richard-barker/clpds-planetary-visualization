@@ -1,0 +1,48 @@
+\documentclass{npj-article}
+
+\title{CLPDS Planetary Exploration Data Visualization Suite: Interactive In-Situ Science and Stratigraphy of China's Lunar and Mars Missions}
+
+\author{%
+  \textbf{Richard Barker}\textsuperscript{1,*},
+  \textbf{Adriana Kaley Sanchez}\textsuperscript{1},
+  \textbf{Manisha Dagar}\textsuperscript{1},
+  \textbf{Katrina Boland}\textsuperscript{1},
+  \textbf{Cau\^{e} Sciascia Borlina}\textsuperscript{2},
+  \textbf{D.~Marshall Porterfield}\textsuperscript{1}
+  \vspace{2mm}\\
+  \textsuperscript{1}\footnotesize Department of Agricultural and Biological Engineering, Purdue University, West Lafayette, IN 47907, USA\\
+  \textsuperscript{2}\footnotesize Department of Earth, Atmospheric, and Planetary Sciences, Purdue University, West Lafayette, IN 47907, USA\\
+  \textsuperscript{*}\footnotesize Corresponding author: \href{mailto:rbarker2@purdue.edu}{rbarker2@purdue.edu}
+}
+
+\input{sections/abstract.tex}
+
+\begin{document}
+\makefrontmatter
+
+\input{sections/introduction.tex}
+\input{sections/results.tex}
+\input{sections/discussion.tex}
+\input{sections/methods.tex}
+\input{sections/conclusion.tex}
+
+\section*{Data Availability}
+All raw scientific data products analyzed in this work are accessible via China's Lunar and Planetary Data Release System (CLPDS) hosted by the National Astronomical Observatories, Chinese Academy of Sciences (NAOC / CNSA) at \url{https://clpds.bao.ac.cn}. The calibrated JSON datasets, spectral libraries, and radar profiles generated in this study are archived on Zenodo (\href{https://doi.org/10.5281/zenodo.XXXXXXX}{DOI: 10.5281/zenodo.XXXXXXX}) and hosted on GitHub (\url{https://github.com/dr-richard-barker/clpds-planetary-visualization}).
+
+\section*{Code Availability}
+The full source code for the data processing pipelines, calibration scripts, and interactive WebGL/Three.js visualization suite is open source under the MIT License at \url{https://github.com/dr-richard-barker/clpds-planetary-visualization}.
+
+\section*{Acknowledgements}
+The authors acknowledge the China National Space Administration (CNSA), the National Astronomical Observatories of the Chinese Academy of Sciences (NAOC), and the science teams of the Chang'e-1 through 6 and Tianwen-1 missions for public archiving and release of planetary exploration data. This research is supported by the DeepSpaceAg research initiative at Purdue University.
+
+\section*{Author Contributions}
+R.B. and D.M.P. conceived and directed the research program. R.B., A.K.S., M.D., and K.B. developed the data processing algorithms, built the web visualization architecture, and drafted the manuscript. C.S.B. provided planetary geophysics and radar/magnetometry modeling expertise. All authors reviewed, edited, and approved the final manuscript.
+
+\section*{Competing Interests}
+The authors declare no competing financial or non-financial interests.
+
+\renewcommand{\bibnumfmt}[1]{#1.}
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}

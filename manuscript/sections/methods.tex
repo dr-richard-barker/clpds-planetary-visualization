@@ -1,0 +1,42 @@
+\section{Methods}
+
+\subsection{CLPDS Data Acquisition and Transformation}
+
+Scientific data products were acquired from China's Lunar and Planetary Data Release System (\url{https://clpds.bao.ac.cn}) and published CNSA/NAOC planetary release bundles under standard Planetary Data System (PDS3 / PDS4) formats:
+\begin{itemize}
+    \item \textbf{Orbital & Surface Topography}: Global DEM and DOM mosaics from Chang'e-1 (120~m/px), Chang'e-2 (7~m/px), and Tianwen-1 MoRIC (100~m/px);
+    \item \textbf{Ground Penetrating Radar}: Level 2B time-domain raw and bandpass-filtered radar traces from Chang'e-4 LPR (500~MHz) and Zhurong RoRAD (25~MHz);
+    \item \textbf{Hyperspectral & LIBS}: Level 2C radiometrically calibrated reflectance spectra from Chang'e-3/4 VNIS, Chang'e-5 LMS, and MarSCoDe LIBS emission spectra;
+    \item \textbf{In-Situ Meteorology & Magnetometry}: Mars Climate Station (MCS) diurnal observations, RoMAG 3-axis magnetometer time-series, and Kiel University LND dosimeter counts.
+\end{itemize}
+
+All raw observations were converted into structured, self-documenting JSON schemas using Python 3.10 and NumPy/SciPy preprocessing pipelines.
+
+\subsection{Radargram Processing & Dielectric Velocity Modeling}
+
+The synthetic and calibrated GPR echograms model time-domain electric field backscatter $E(t, x)$ along rover traverses:
+\begin{equation}
+    E_{\text{norm}}(t, x) = \text{clip}\left( \frac{G \cdot E(t, x)}{\max |E|}, -1.0, 1.0 \right)
+    \label{eq:gain}
+\end{equation}
+where $G$ is the user-adjustable gain multiplier ($0.5\times$ to $4.0\times$).
+
+Hyperbolic point diffractions representing buried boulder scatterers at position $(x_0, z_0)$ are computed dynamically using the two-way travel time hyperbola:
+\begin{equation}
+    t(x) = \sqrt{t_0^2 + \frac{4(x - x_0)^2}{v^2}} = \sqrt{t_0^2 + \frac{4\varepsilon_r (x - x_0)^2}{c^2}}
+    \label{eq:hyperbola}
+\end{equation}
+where $t_0 = 2z_0 / v$. The client-side HTML5 Canvas visualizer renders real-time color look-up tables (LUTs) for Seismic, Grayscale, Viridis, Magma, and Cyan colormaps at 60 FPS.
+
+\subsection{Continuum Removal Algorithm}
+
+Continuum removal for Vis-NIR reflectance curves is performed via an upper convex hull algorithm:
+\begin{enumerate}
+    \item Anchor points $\lambda_1, \lambda_2$ are identified at the shoulders of absorption bands ($750\text{ nm}$ and $1,550\text{ nm}$ for Band I; $1,550\text{ nm}$ and $2,600\text{ nm}$ for Band II);
+    \item Linear continuum segments $C(\lambda)$ are interpolated between anchor points;
+    \item Normalized reflectance $R_c(\lambda) = R(\lambda) / C(\lambda)$ is evaluated, and band depth $BD = 1 - R_c(\lambda_0)$ is computed at band center $\lambda_0$.
+\end{enumerate}
+
+\subsection{Client-Side Three.js WebGL Architecture}
+
+The 3D interactive globes are implemented using Three.js (r160) and WebGL with custom shader pipelines, dynamic orbit damping, raycasting, and smooth Catmull-Rom spline camera animations.

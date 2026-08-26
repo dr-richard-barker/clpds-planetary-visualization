@@ -1,0 +1,84 @@
+{
+  "title": "CLPDS Planetary Exploration Data Visualization Suite: Interactive In-Situ Science and Stratigraphy of China's Lunar and Mars Missions",
+  "description": "FAIR-compliant scientific analysis pipeline, publication-quality LaTeX manuscript, and interactive WebGL/Three.js multi-mission visualization suite for scientific data released by China's Lunar and Planetary Data Release System (CLPDS / NAOC / CNSA). Spanning Chang'e-1 through Chang'e-6 lunar missions and the Tianwen-1 / Zhurong Mars mission, this repository provides interactive 3D planetary globes, ground-penetrating radar (GPR) subsurface stratigraphy profiling (LPR and RoRAD), Vis-NIR and LIBS spectroscopy laboratories (VNIS, LMS, MarSCoDe), and Martian boundary layer meteorological and geophysics dashboards (MCS, RoMAG, LND).",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "creators": [
+    {
+      "name": "Barker, Richard",
+      "affiliation": "Purdue University",
+      "orcid": "0000-0002-6908-1634"
+    },
+    {
+      "name": "Sanchez, Adriana Kaley",
+      "affiliation": "Purdue University"
+    },
+    {
+      "name": "Dagar, Manisha",
+      "affiliation": "Purdue University"
+    },
+    {
+      "name": "Boland, Katrina",
+      "affiliation": "Purdue University"
+    },
+    {
+      "name": "Borlina, Cauê Sciascia",
+      "affiliation": "Purdue University"
+    },
+    {
+      "name": "Porterfield, D. Marshall",
+      "affiliation": "Purdue University"
+    }
+  ],
+  "keywords": [
+    "CLPDS",
+    "Chang'e mission",
+    "Tianwen-1",
+    "Zhurong rover",
+    "Lunar Penetrating Radar",
+    "RoRAD",
+    "lunar farside",
+    "South Pole-Aitken basin",
+    "Mons Rümker",
+    "Utopia Planitia",
+    "Vis-NIR spectroscopy",
+    "LIBS",
+    "Mars climate",
+    "planetary data system",
+    "deep space agriculture",
+    "FAIR data"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://clpds.bao.ac.cn",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://doi.org/10.1038/s41586-022-05147-5",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://doi.org/10.1126/sciadv.aaz1704",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://doi.org/10.1038/s41467-022-28069-7",
+      "relation": "cites",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    }
+  ],
+  "communities": [
+    {"identifier": "zenodo"},
+    {"identifier": "space-biology"},
+    {"identifier": "planetary-science"}
+  ],
+  "notes": "Software and data pipeline repository accompanying the publication submitted to Nature Publishing Group. Maintained under the DeepSpaceAg / CoSE research initiative at Purdue University."
+}
