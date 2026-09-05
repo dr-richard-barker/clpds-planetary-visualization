@@ -4,15 +4,15 @@
 
 Scientific data products were acquired from China's Lunar and Planetary Data Release System (\url{https://clpds.bao.ac.cn}) and published CNSA/NAOC planetary release bundles under standard Planetary Data System (PDS3 / PDS4) formats:
 \begin{itemize}
-    \item \textbf{Orbital & Surface Topography}: Global DEM and DOM mosaics from Chang'e-1 (120~m/px), Chang'e-2 (7~m/px), and Tianwen-1 MoRIC (100~m/px);
+    \item \textbf{Orbital \& Surface Topography}: Global DEM and DOM mosaics from Chang'e-1 (120~m/px), Chang'e-2 (7~m/px), and Tianwen-1 MoRIC (100~m/px);
     \item \textbf{Ground Penetrating Radar}: Level 2B time-domain raw and bandpass-filtered radar traces from Chang'e-4 LPR (500~MHz) and Zhurong RoRAD (25~MHz);
-    \item \textbf{Hyperspectral & LIBS}: Level 2C radiometrically calibrated reflectance spectra from Chang'e-3/4 VNIS, Chang'e-5 LMS, and MarSCoDe LIBS emission spectra;
-    \item \textbf{In-Situ Meteorology & Magnetometry}: Mars Climate Station (MCS) diurnal observations, RoMAG 3-axis magnetometer time-series, and Kiel University LND dosimeter counts.
+    \item \textbf{Hyperspectral \& LIBS}: Level 2C radiometrically calibrated reflectance spectra from Chang'e-3/4 VNIS, Chang'e-5 LMS, and MarSCoDe LIBS emission spectra;
+    \item \textbf{In-Situ Meteorology \& Magnetometry}: Mars Climate Station (MCS) diurnal observations, RoMAG 3-axis magnetometer time-series, and Kiel University LND dosimeter counts.
 \end{itemize}
 
 All raw observations were converted into structured, self-documenting JSON schemas using Python 3.10 and NumPy/SciPy preprocessing pipelines.
 
-\subsection{Radargram Processing & Dielectric Velocity Modeling}
+\subsection{Radargram Processing \& Dielectric Velocity Modeling}
 
 The synthetic and calibrated GPR echograms model time-domain electric field backscatter $E(t, x)$ along rover traverses:
 \begin{equation}

@@ -35,15 +35,10 @@ title: "Publications & Manuscript"
 <div class="card">
     <h2><i class="fas fa-quote-right"></i> BibTeX Citation</h2>
     <pre style="background:#070a12;border:1px solid rgba(255,255,255,0.1);padding:1rem;border-radius:6px;font-family:monospace;font-size:0.82rem;color:var(--accent-cyan);overflow-x:auto;">
-@article{barker2026clpds,
+@unpublished{barker2026clpds,
   title={CLPDS Planetary Exploration Data Visualization Suite: Interactive In-Situ Science and Stratigraphy of China's Lunar and Mars Missions},
   author={Barker, Richard and Sanchez, Adriana Kaley and Dagar, Manisha and Boland, Katrina and Borlina, Cau{\^e} Sciascia and Porterfield, D Marshall},
-  journal={npj Microgravity},
-  volume={12},
-  number={1},
-  pages={45},
   year={2026},
-  publisher={Nature Publishing Group},
-  doi={10.1038/s41526-026-00451-x}
+  note={Manuscript in preparation; target journal: npj Microgravity. Not yet published --- no DOI, volume or page numbers have been assigned.}
 }</pre>
 </div>
